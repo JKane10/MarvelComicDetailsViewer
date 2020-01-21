@@ -3,7 +3,7 @@
 ## About
 This repository contains a simple, single screen native Android comic details page viewer application powered by the Marvel Developer API (https://developer.marvel.com/). 
 
-Users will be presented with a page detailing a comic upon opening. There is a refresh button to query a random comic. Unfortuantely I couldn't find an API for getting a random list of comicIds from the Marvel API, so the application will query a random Id between 1 and 20,000. If the Id is found, the results will be cached in a local DB and displayed on the screen. If the results are not found, it is added to a database of invalid ids and the user can try again. Kind of like comic roullette.
+Users will be presented with a page detailing a comic upon opening. There is a refresh button to query a random comic. Unfortuantely I couldn't find an API for getting a random list of comicIds from the Marvel API, so the application will query a random Id between 1 and 20,000. If the Id is found, the results will be cached in a local DB and displayed on the screen. If the results are not found, it is added to a database of invalid ids and the user can try again. Kind of like comic roulette.
 It was written using 100% kotlin and follows a semi MVVM architecture.
 
 ![alt text](comic_viewer.png)
