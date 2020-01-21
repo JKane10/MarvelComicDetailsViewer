@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Comic Viewer</string>
+
+    <!-- There's probably a SUPER powered joke here somewhere... -->
+    <string name="super_generic_error_message">"Something went wrong"</string>
+
+    <string name="coming_soon">Coming soon!</string>
+    <string name="data_not_available">Data not available</string>
+    <string name="comic_not_found">Random Comic Id: %s not found, please try again</string>
+    <string name="publish_date">Published: %s</string>
+</resources>

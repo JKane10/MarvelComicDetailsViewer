@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.screens.comicdetails.ComicDetailsFragment">
+
+    <!-- TODO : Move all these hardcoded values into a style or resource file -->
+    <!-- Referenced https://lh3.googleusercontent.com/yVV4xp-CKGv-KPmIUT2xjgqsmk-m0n50Z9QbltssJFfbUGlrqrSfIf5yKc0J7X_HAWM=w1922-h945 -->
+    <!-- Referenced https://lh3.googleusercontent.com/WdAedeekMxRUSP04ZQENmtyZb94agX6p1JfAHDCDP5wjnji3MwGY6x_wsdmiEixtG2w=w1922-h945 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header area -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_content"
+            android:layout_width="match_parent"
+            android:layout_height="325dp"
+            app:layout_constraintBottom_toTopOf="@+id/text_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/refresh_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_refresh_24px"
+                />
+
+            <ImageView
+                android:id="@+id/background_image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_above="@+id/read_cta"
+                android:alpha="0.25"
+                android:src="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toTopOf="@+id/read_cta"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/featured_image"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/background_image"
+                app:layout_constraintBottom_toTopOf="@+id/read_cta"
+                app:layout_constraintEnd_toEndOf="@+id/background_image"
+                app:layout_constraintStart_toStartOf="@+id/background_image"
+                app:layout_constraintTop_toTopOf="@+id/background_image"
+                tools:src="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/read_cta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:background="#ff0000"
+                android:text="Read Now"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/featured_image" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Content area -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/text_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_content"
+            android:padding="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_content">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="The Amazing Spider-Man (2018) #1" />
+
+            <View
+                android:id="@+id/title_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="#aaaaaa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+            <TextView
+                android:id="@+id/description_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="The Story"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_divider" />
+
+            <TextView
+                android:id="@+id/description_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description_header"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+
+            <TextView
+                android:id="@+id/cover_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Cover"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description_text" />
+
+            <TextView
+                android:id="@+id/cover_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cover_header"
+                tools:text="Colorist: Steve Wozniak\nPencilier: Steve Jobs" />
+
+            <TextView
+                android:id="@+id/interior_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Interior"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cover_text" />
+
+            <TextView
+                android:id="@+id/interior_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interior_header"
+                tools:text="Editor: John Lennon\nColorist: Paul McCartney\nInker: George Harrison\nWriter: Ringo Starr" />
+
+            <TextView
+                android:id="@+id/publish_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interior_text"
+                tools:text="Published: Jul 11, 2018" />
+
+            <Button
+                android:id="@+id/more_in_series_cta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:background="#000000"
+                android:text="More In This Series"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/publish_date" />
+
+            <Button
+                android:id="@+id/recommended_series_cta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:background="#000000"
+                android:text="Recommended Series"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/more_in_series_cta" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
