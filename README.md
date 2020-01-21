@@ -29,3 +29,10 @@ It was written using 100% kotlin and follows a semi MVVM architecture.
 
 ### GIF
 ![alt_test](comic_viewer.gif)
+
+### TODO
+* Move more to dagger in the feature package such as the coordinator
+* Write more robust tests, especially instrumentation
+* Break more common logic into utils such as seen in the coordinator
+* Dig deeper into the Marvel API to see if there's a better way to get a random comic.
+* More features!
